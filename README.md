@@ -5,7 +5,7 @@ colorFrom: blue
 colorTo: green
 sdk: streamlit
 sdk_version: "1.32.0"
-app_file: streamlit_app.py
+app_file: app.py
 pinned: true
 license: cc-by-nc-4.0
 ---
