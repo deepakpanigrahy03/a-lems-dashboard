@@ -851,13 +851,14 @@ def render(ctx: dict):
                 else:
                     _conn = get_conn()
                     if _conn.get("verified"):
+                        _btasks = _selected_tasks if "_selected_tasks" in dir() else []
                         _payload = {
-                            "task_id":      b_tasks[0] if len(b_tasks)==1 else "batch",
+                            "task_id":      _btasks[0] if len(_btasks)==1 else "batch",
                             "provider":     b_providers[0] if b_providers else "cloud",
                             "country_code": b_country,
                             "repetitions":  int(b_reps),
-                            "cool_down":    int(b_cd),
-                            "tasks":        b_tasks,
+                            "cool_down":    int(b_cooldown),
+                            "tasks":        _btasks,
                             "providers":    b_providers,
                         }
                         with st.spinner("Sending to live lab..."):
