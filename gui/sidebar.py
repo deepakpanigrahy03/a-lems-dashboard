@@ -39,14 +39,33 @@ _CSS = """
 """
 
 
+def _read_live_url() -> dict:
+    """Read live_url.json pushed by tunnel_agent.py — auto-populates URL in sidebar."""
+    import json as _json
+    from pathlib import Path as _Path
+    # Check both Space root and repo root
+    for p in [_Path(__file__).parent.parent / "live_url.json",
+              _Path("live_url.json")]:
+        if p.exists():
+            try:
+                return _json.loads(p.read_text())
+            except Exception:
+                pass
+    return {}
+
+
 def _live_panel():
     """Live Lab connect / status panel."""
-    conn   = get_conn()
-    online = conn.get("verified", False)
+    conn      = get_conn()
+    online    = conn.get("verified", False)
+    _live     = _read_live_url()
+    _lab_live = _live.get("online", False)
     clr    = "#22c55e" if online else "#3b82f6"
     icon   = "🟢" if online else "🔌"
     sub    = ("Connected · " + conn["url"].replace("https://", "")[:32]
-              if online else "Offline — full analysis mode")
+              if online
+              else ("🟢 Lab online — click Connect" if _lab_live
+                    else "Offline — full analysis mode"))
 
     st.markdown(
         f"<div style='margin:10px 0 4px;padding:7px 10px;background:#0a1018;"
@@ -83,18 +102,30 @@ def _live_panel():
                 "</div>",
                 unsafe_allow_html=True,
             )
+            # Auto-populate from live_url.json if lab is online
+            _auto_url = _live.get("url", "") if _lab_live else ""
+            _auto_tok = _live.get("token", "") if _lab_live else ""
+
+            if _lab_live and _auto_url:
+                st.markdown(
+                    f"<div style='font-size:8px;color:#22c55e;padding:2px 4px 6px;'>"
+                    f"🟢 Lab is online — URL auto-detected!</div>",
+                    unsafe_allow_html=True)
+
             _url = st.text_input(
                 "Lab URL",
-                placeholder="https://a-lems.yourdomain.com",
+                value=_auto_url,
+                placeholder="https://xxxx.lhr.life",
                 key="conn_url",
-                help="Permanent Cloudflare tunnel URL shared by the lab owner",
+                help="Auto-populated when lab is online, or enter manually",
             )
             _tok = st.text_input(
                 "Access token",
+                value=_auto_tok,
                 placeholder="alems-xxxxxxxxxxxxxxxx",
                 type="password",
                 key="conn_tok",
-                help="Shared access token — ask the lab owner",
+                help="Shared access token",
             )
             if st.button("🔗  Connect", key="nav_connect",
                          use_container_width=True):
