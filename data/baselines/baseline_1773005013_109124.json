@@ -1,0 +1,25 @@
+{
+  "baseline_id": "baseline_1773005013_109124",
+  "timestamp": 1773005013.2897768,
+  "timestamp_iso": "2026-03-08T16:23:33.289777",
+  "power_watts": {
+    "core": 0.9825394,
+    "package-0": 2.537391766666667,
+    "uncore": 0.000118
+  },
+  "duration_seconds": 30,
+  "sample_count": 3,
+  "std_dev_watts": {
+    "core": 0.01147977140930947,
+    "package-0": 0.005187717893576498,
+    "uncore": 9.263368717696606e-06
+  },
+  "cpu_temperature_c": 0,
+  "method": "idle_measurement",
+  "metadata": {
+    "governor": "powersave",
+    "turbo": "enabled",
+    "processes": 368,
+    "background_cpu": 1.8
+  }
+}

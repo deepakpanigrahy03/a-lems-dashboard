@@ -1,0 +1,64 @@
+[
+  {
+    "provider": "cloud",
+    "task": "Simple Q&A",
+    "linear_energy_j": {
+      "mean": 0.651838,
+      "std": NaN,
+      "ci_lower": NaN,
+      "ci_upper": NaN,
+      "min": 0.651838,
+      "max": 0.651838,
+      "n": 1
+    },
+    "agentic_energy_j": {
+      "mean": 0.956858,
+      "std": NaN,
+      "ci_lower": NaN,
+      "ci_upper": NaN,
+      "min": 0.956858,
+      "max": 0.956858,
+      "n": 1
+    },
+    "orchestration_tax": {
+      "mean": 1.4679383527809056,
+      "std": NaN,
+      "ci_lower": NaN,
+      "ci_upper": NaN,
+      "min": 1.4679383527809056,
+      "max": 1.4679383527809056,
+      "n": 1
+    }
+  },
+  {
+    "provider": "cloud",
+    "task": "Capital City Query",
+    "linear_energy_j": {
+      "mean": 0.0,
+      "std": NaN,
+      "ci_lower": NaN,
+      "ci_upper": NaN,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 1
+    },
+    "agentic_energy_j": {
+      "mean": 1.907465,
+      "std": NaN,
+      "ci_lower": NaN,
+      "ci_upper": NaN,
+      "min": 1.907465,
+      "max": 1.907465,
+      "n": 1
+    },
+    "orchestration_tax": {
+      "mean": "0",
+      "std": NaN,
+      "ci_lower": NaN,
+      "ci_upper": NaN,
+      "min": "0",
+      "max": "0",
+      "n": 1
+    }
+  }
+]

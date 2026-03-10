@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "detected_at": "2026-02-24T13:11:31.752380",
+    "hostname": "UBUNTU2505",
+    "system": "Linux",
+    "release": "6.17.0-14-generic",
+    "machine": "x86_64"
+  },
+  "rapl": {
+    "paths": {
+      "core": "/sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:0/energy_uj",
+      "package-0": "/sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/energy_uj",
+      "uncore": "/sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:1/energy_uj"
+    },
+    "available_domains": [
+      "core",
+      "package-0",
+      "uncore"
+    ],
+    "has_dram": false
+  },
+  "thermal": {
+    "paths": {
+      "SEN2": "/sys/class/thermal/thermal_zone2/temp",
+      "INT3400 Thermal": "/sys/class/thermal/thermal_zone0/temp",
+      "x86_pkg_temp": "/sys/class/thermal/thermal_zone7/temp",
+      "iwlwifi_1": "/sys/class/thermal/thermal_zone5/temp",
+      "SEN3": "/sys/class/thermal/thermal_zone3/temp",
+      "SEN1": "/sys/class/thermal/thermal_zone1/temp",
+      "TCPU": "/sys/class/thermal/thermal_zone6/temp",
+      "SEN4": "/sys/class/thermal/thermal_zone4/temp"
+    },
+    "package_temp": "x86_pkg_temp"
+  },
+  "msr": {
+    "devices": [
+      "/dev/cpu/0/msr",
+      "/dev/cpu/1/msr",
+      "/dev/cpu/2/msr",
+      "/dev/cpu/3/msr",
+      "/dev/cpu/4/msr",
+      "/dev/cpu/5/msr",
+      "/dev/cpu/6/msr",
+      "/dev/cpu/7/msr"
+    ],
+    "count": 8,
+    "cstate_counter_max": 18446744073709551615,
+    "ring_bus_base_clock_mhz": 100,
+    "wakeup_idle_ms": 2
+  },
+  "cpufreq": {
+    "paths": {
+      "scaling_cur_freq": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq",
+      "scaling_max_freq": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
+      "scaling_min_freq": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq"
+    }
+  },
+  "cpu": {
+    "physical_cores": 4,
+    "logical_cores": 8,
+    "cores_list": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "tsc_frequency_hz": 2800000000,
+    "tsc_detection_method": "auto_detected"
+  },
+  "turbostat": {
+    "available": true,
+    "columns": {
+      "c1_residency": "C1ACPI%",
+      "c2_residency": "C2ACPI%",
+      "c3_residency": "C3ACPI%",
+      "c6_residency": "CPU%c6",
+      "c7_residency": "CPU%c7",
+      "c8_residency": "Pkg%pc8",
+      "c9_residency": "Pkg%pc9",
+      "c10_residency": "Pk%pc10",
+      "gfx_rc6": "GFX%rc6",
+      "gfx_freq": "GFXMHz",
+      "package_temp": "PkgTmp",
+      "bzy_mhz": "Bzy_MHz",
+      "tsc_mhz": "TSC_MHz",
+      "avg_mhz": "Avg_MHz",
+      "pkg_watts": "PkgWatt",
+      "cor_watts": "CorWatt",
+      "gfx_watts": "GFXWatt",
+      "ram_watts": "RAMWatt",
+      "ipc": "IPC",
+      "irq": "IRQ",
+      "busy_percent": "Busy%"
+    },
+    "available_metrics": [
+      "1",
+      "10",
+      "2",
+      "3",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "raw_columns": [
+      "usec",
+      "Time_Of_Day_Seconds",
+      "Core",
+      "CPU",
+      "APIC",
+      "X2APIC",
+      "Avg_MHz",
+      "Busy%",
+      "Bzy_MHz",
+      "TSC_MHz",
+      "IPC",
+      "IRQ",
+      "NMI",
+      "SMI",
+      "POLL-",
+      "POLL",
+      "C1ACPI-",
+      "C1ACPI",
+      "C1ACPI+",
+      "C2ACPI-",
+      "C2ACPI",
+      "C2ACPI+",
+      "C3ACPI-",
+      "C3ACPI",
+      "C3ACPI+",
+      "POLL%",
+      "C1ACPI%",
+      "C2ACPI%",
+      "C3ACPI%",
+      "CPU%c1",
+      "CPU%c6",
+      "CPU%c7",
+      "CoreTmp",
+      "CoreThr",
+      "PkgTmp",
+      "GFX%rc6",
+      "GFXMHz",
+      "GFXAMHz",
+      "Totl%C0",
+      "Any%C0",
+      "GFX%C0",
+      "CPUGFX%",
+      "Pkg%pc2",
+      "Pkg%pc3",
+      "Pkg%pc6",
+      "Pkg%pc7",
+      "Pkg%pc8",
+      "Pkg%pc9",
+      "Pk%pc10",
+      "CPU%LPI",
+      "SYS%LPI",
+      "PkgWatt",
+      "CorWatt",
+      "GFXWatt",
+      "RAMWatt",
+      "PKG_%",
+      "RAM_%",
+      "UncMHz",
+      "SysWatt"
+    ],
+    "msr_access": true,
+    "error": null,
+    "real_binary": "/usr/lib/linux-tools/6.17.0-14-generic/turbostat",
+    "detection_method": "csv_parser"
+  },
+  "ring_bus": {
+    "min_mhz": 400.0,
+    "max_mhz": 3600.0,
+    "base_clock_mhz": 100,
+    "detection_method": "sysfs",
+    "sysfs_paths": {
+      "current_freq": "/sys/devices/system/cpu/intel_uncore_frequency/package_00_die_00/current_freq_khz",
+      "initial_max_freq": "/sys/devices/system/cpu/intel_uncore_frequency/package_00_die_00/initial_max_freq_khz",
+      "initial_min_freq": "/sys/devices/system/cpu/intel_uncore_frequency/package_00_die_00/initial_min_freq_khz",
+      "max_freq": "/sys/devices/system/cpu/intel_uncore_frequency/package_00_die_00/max_freq_khz",
+      "min_freq": "/sys/devices/system/cpu/intel_uncore_frequency/package_00_die_00/min_freq_khz"
+    }
+  }
+}

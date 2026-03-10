@@ -1,0 +1,36 @@
+# A-LEMS Tunnel Configuration
+# ════════════════════════════════════════════════════════════════
+#
+# FIRST TIME SETUP (3 minutes, completely free):
+#
+# STEP 1 — Install cloudflared:
+#   wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+#   sudo dpkg -i cloudflared-linux-amd64.deb
+#
+# STEP 2 — Login with your free Cloudflare account:
+#   cloudflared tunnel login
+#   (opens browser → click Authorise → returns to terminal)
+#
+# STEP 3 — Create your permanent named tunnel:
+#   cloudflared tunnel create a-lems
+#   → It prints a UUID like: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+#   → Paste that UUID below
+#
+# STEP 4 — Fill in this file and run:  python tunnel_agent.py
+#
+# Your URL will be: https://<tunnel_uuid>.cfargotunnel.com
+# It NEVER changes. Share it once by email. Done forever.
+# ════════════════════════════════════════════════════════════════
+
+tunnel_name: "a-lems"
+tunnel_uuid: "PASTE-UUID-FROM-STEP-3-HERE"
+
+# Single shared token — all researchers use this same token
+# Generate one: python -c "import secrets; print('alems-'+secrets.token_urlsafe(12))"
+token: "alems-choose-a-passphrase"
+
+# Optional: if you own a domain managed by Cloudflare, you can
+# map a clean subdomain to your tunnel instead of cfargotunnel.com
+# Example: "lab.yourdomain.com"  or "alems.uni-yourlab.ac.uk"
+# Leave blank to use the default cfargotunnel.com URL
+custom_hostname: ""

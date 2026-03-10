@@ -1,0 +1,33 @@
+[
+  {
+    "provider": "cloud",
+    "task": "GSM8K Arithmetic",
+    "linear_energy_j": {
+      "mean": 1.010336,
+      "std": NaN,
+      "ci_lower": NaN,
+      "ci_upper": NaN,
+      "min": 1.010336,
+      "max": 1.010336,
+      "n": 1
+    },
+    "agentic_energy_j": {
+      "mean": 1.274683,
+      "std": NaN,
+      "ci_lower": NaN,
+      "ci_upper": NaN,
+      "min": 1.274683,
+      "max": 1.274683,
+      "n": 1
+    },
+    "orchestration_tax": {
+      "mean": 1.2616426614512402,
+      "std": NaN,
+      "ci_lower": NaN,
+      "ci_upper": NaN,
+      "min": 1.2616426614512402,
+      "max": 1.2616426614512402,
+      "n": 1
+    }
+  }
+]

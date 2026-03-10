@@ -1,0 +1,24 @@
+{
+  "measurement_id": "meas_1771725299_349293",
+  "baseline_id": "baseline_1771716410",
+  "energy_uj": {
+    "package": 8398782,
+    "core": 5697434,
+    "dram": null,
+    "uncore": 2701348,
+    "idle": 2609781,
+    "workload": 5789001,
+    "reasoning": 4623012,
+    "orchestration_tax": 1165989
+  },
+  "energy_j": {
+    "package": 8.398782,
+    "workload": 5.789001,
+    "orchestration_tax": 1.165989
+  },
+  "ratios": {
+    "reasoning_percent": 55.04383849943956,
+    "tax_percent": 13.882834439565164
+  },
+  "duration_seconds": 1.349900245666504
+}

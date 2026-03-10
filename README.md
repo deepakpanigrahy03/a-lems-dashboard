@@ -12,4 +12,4 @@ license: cc-by-nc-4.0
 
 # ⚡ A-LEMS — Agentic LLM Energy Measurement System
 
-PhD Research Dashboard — measuring orchestration energy tax of agentic vs linear LLM execution using Intel RAPL hardware counters.
+PhD Research Dashboard measuring orchestration energy tax of agentic vs linear LLM execution using Intel RAPL hardware counters.
