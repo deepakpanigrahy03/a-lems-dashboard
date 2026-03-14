@@ -110,7 +110,7 @@ def _load_tax_for_session(group_id: str) -> pd.DataFrame:
             ots.agentic_dynamic_uj / 1e6  AS agentic_dynamic_j,
             ots.orchestration_tax_uj / 1e6 AS tax_j,
             ots.tax_percent,
-            ots.tax_percent / 100.0        AS tax_multiplier,
+            CASE WHEN rl.total_energy_uj > 0 THEN CAST(ra.total_energy_uj AS REAL) / rl.total_energy_uj ELSE 1.0 END AS tax_multiplier,
             el.task_name, el.provider, el.model_name,
             rl.run_number,
             rl.duration_ns/1e6   AS linear_ms,
