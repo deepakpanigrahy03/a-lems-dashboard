@@ -1184,3 +1184,30 @@ def render_session_analysis(group_id: str):
     with s4: _tab_cpu(runs)
     with s5: _tab_per_pair(tax)
     with s6: _tab_export(group_id, exps, runs, tax)
+
+
+def render(ctx: dict):
+    """Entry point called by streamlit_app.py dispatcher."""
+    import streamlit as st
+    from gui.db import q
+
+    try:
+        recent = q("""
+            SELECT group_id, MAX(exp_id) as latest
+            FROM experiments
+            GROUP BY group_id
+            ORDER BY latest DESC
+            LIMIT 20
+        """)
+    except Exception:
+        recent = None
+
+    gid_options = recent["group_id"].tolist() if recent is not None and not recent.empty else []
+
+    if not gid_options:
+        st.info("No sessions yet. Run an experiment first.")
+        return
+
+    sel = st.selectbox("Select session", gid_options, key="sa_gid_sel")
+    if sel:
+        render_session_analysis(sel)
