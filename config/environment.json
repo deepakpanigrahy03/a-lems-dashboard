@@ -1,0 +1,26 @@
+{
+  "python_version": "3.13.7",
+  "python_implementation": "CPython",
+  "os_name": "Linux",
+  "os_version": "#14-Ubuntu SMP PREEMPT_DYNAMIC Fri Jan  9 17:01:16 UTC 2026",
+  "kernel_version": "6.17.0-14-generic",
+  "git": {
+    "commit": "632c2981eab9d19e",
+    "branch": "feature/per-pair-insertion",
+    "dirty": true
+  },
+  "dependencies": {
+    "numpy": "1.26.4",
+    "torch": null,
+    "transformers": null
+  },
+  "env_hash": "6f211026ec6c7db5",
+  "git_commit": "63eea4ad7639582a",
+  "git_branch": "feature/per-pair-insertion",
+  "git_dirty": true,
+  "numpy_version": "1.26.4",
+  "torch_version": null,
+  "transformers_version": null,
+  "container_runtime": null,
+  "container_image": null
+}

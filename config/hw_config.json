@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "detected_at": "2026-03-08T06:00:40.635866",
+    "detected_at": "2026-03-12T04:45:14.244893",
     "hostname": "UBUNTU2505",
     "system": "Linux",
     "release": "6.17.0-14-generic",
@@ -23,11 +23,11 @@
     "paths": {
       "SEN2": "/sys/class/thermal/thermal_zone2/temp",
       "INT3400 Thermal": "/sys/class/thermal/thermal_zone0/temp",
-      "x86_pkg_temp": "/sys/class/thermal/thermal_zone7/temp",
-      "iwlwifi_1": "/sys/class/thermal/thermal_zone5/temp",
+      "TCPU": "/sys/class/thermal/thermal_zone7/temp",
+      "x86_pkg_temp": "/sys/class/thermal/thermal_zone5/temp",
       "SEN3": "/sys/class/thermal/thermal_zone3/temp",
       "SEN1": "/sys/class/thermal/thermal_zone1/temp",
-      "TCPU": "/sys/class/thermal/thermal_zone6/temp",
+      "iwlwifi_1": "/sys/class/thermal/thermal_zone6/temp",
       "SEN4": "/sys/class/thermal/thermal_zone4/temp"
     },
     "package_temp": "x86_pkg_temp",
@@ -46,14 +46,14 @@
           "throttle_temp": null
         }
       ],
-      "x86_pkg_temp": [
+      "TCPU": [
         {
           "path": "/sys/class/thermal/thermal_zone7/temp",
           "zone": "thermal_zone7",
-          "throttle_temp": -274.0
+          "throttle_temp": 110.05
         }
       ],
-      "iwlwifi_1": [
+      "x86_pkg_temp": [
         {
           "path": "/sys/class/thermal/thermal_zone5/temp",
           "zone": "thermal_zone5",
@@ -74,11 +74,11 @@
           "throttle_temp": null
         }
       ],
-      "TCPU": [
+      "iwlwifi_1": [
         {
           "path": "/sys/class/thermal/thermal_zone6/temp",
           "zone": "thermal_zone6",
-          "throttle_temp": 110.05
+          "throttle_temp": -274.0
         }
       ],
       "SEN4": [
@@ -90,14 +90,10 @@
       ]
     },
     "sensors_to_monitor": {
-      "SEN2": "SEN2",
-      "system": "INT3400 Thermal",
       "cpu_package": "x86_pkg_temp",
-      "wifi": "iwlwifi_1",
-      "SEN3": "SEN3",
-      "SEN1": "SEN1",
       "cpu_alt": "TCPU",
-      "SEN4": "SEN4"
+      "wifi": "iwlwifi_1",
+      "system": "INT3400 Thermal"
     },
     "sampling_rate_hz": 1
   },
@@ -114,8 +110,6 @@
     ],
     "count": 8,
     "cstate_counter_max": 18446744073709551615,
-    "ring_bus_base_clock_mhz": 100.0,
-    "wakeup_idle_ms": 2,
     "cstate_counters": {
       "c2": {
         "address": "0x3F8",
@@ -133,7 +127,9 @@
         "address": "0x3FB",
         "available": false
       }
-    }
+    },
+    "ring_bus_base_clock_mhz": 100.0,
+    "wakeup_idle_ms": 2
   },
   "cpufreq": {
     "paths": {
@@ -143,6 +139,9 @@
     }
   },
   "cpu": {
+    "model": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+    "vendor": "GenuineIntel",
+    "microcode": "0xbe",
     "physical_cores": 4,
     "logical_cores": 8,
     "cores_list": [
@@ -272,5 +271,37 @@
     "real_binary": "/usr/lib/linux-tools/6.17.0-14-generic/turbostat",
     "detection_method": "csv_parser"
   },
+  "cpu_flags": {
+    "has_avx2": true,
+    "has_avx512": true,
+    "has_vmx": true
+  },
+  "cpu_details": {
+    "family": 6,
+    "model": 140,
+    "stepping": 1
+  },
+  "gpu": {
+    "model": "Corporation TigerLake-LP GT2 [Iris Xe Graphics] (rev 01)",
+    "driver": "i915",
+    "count": 1
+  },
+  "system": {
+    "manufacturer": "LENOVO",
+    "product": "20TDCTO1WW",
+    "type": "laptop",
+    "virtualization": null
+  },
+  "cpu_model": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+  "cpu_cores": 4,
+  "ram_gb": 6,
+  "gpu_model": "Corporation TigerLake-LP GT2 [Iris Xe Graphics] (rev 01)",
+  "system_manufacturer": "LENOVO",
+  "system_product": "20TDCTO1WW",
+  "system_type": "laptop",
+  "virtualization_type": null,
+  "cpu_vendor": "GenuineIntel",
+  "microcode_version": "0xbe",
+  "hardware_hash": "ebe694229b1b9d87",
   "config_version": 2
 }
